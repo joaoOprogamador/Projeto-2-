@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Agenda de Contatos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Agenda de Contatos</h1>
+
+    <form id="contact-form" class="card">
+      <div class="field">
+        <label for="name">Nome</label>
+        <input id="name" name="name" type="text" required minlength="1" placeholder="Nome do contato">
+      </div>
+
+      <div class="field">
+        <label for="phone">Telefone</label>
+        <input id="phone" name="phone" type="tel" required pattern="[0-9\s+()-]{6,}" placeholder="(00) 90000-0000">
+      </div>
+
+      <div class="actions">
+        <button type="submit" id="add-btn">Cadastrar</button>
+        <button type="button" id="clear-btn" class="muted">Limpar tabela</button>
+      </div>
+    </form>
+
+    <section class="card">
+      <h2>Contatos</h2>
+      <table id="contacts-table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>          
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
